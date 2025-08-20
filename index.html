@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Apollo Pharmacy Landing Page</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+        background-image: url("D:\VRIF\apl bg.jpg");
+        color: #210f0f;
+        scroll-behavior: smooth;
+    }
+    header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: #150a2a;
+        color: rgb(232, 218, 218);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        z-index: 100;
+    }
+    header h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    nav a {
+        margin: 0 1rem;
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    nav a:hover {
+        color: #ffeb3b;
+    }
+    .hero {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url('https://apollohealthlib.blob.core.windows.net/health-library/2020/05/Apollo-Pharmacy-Store.jpg') center/cover no-repeat;
+        position: relative;
+        text-align: center;
+        padding: 2rem;
+    }
+    .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('apl bg.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        color: white;
+    }
+    .hero-content h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    .btn {
+        padding: 0.8rem 1.5rem;
+        background: #ffeb3b;
+        color: #060707;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .btn:hover {
+        background: #1c0e5c;
+        color: thistle;
+    }
+    section {
+        padding: 5rem 2rem;
+        text-align: center;
+    }
+    section h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #04f1f5;
+    }
+    section p {
+        max-width: 700px;
+        margin: 0 auto 2rem;
+        line-height: 1.6;
+        color: #000000;
+    }
+
+    .contact h3{
+        color: #060707;
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+    .card {
+        background: rgb(200, 236, 246);
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(54, 2, 227, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        margin-top: 150px;
+    }
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        background-color:rgb(157, 223, 241) ;
+    }
+    .card h4 {
+        margin-bottom: 1rem;
+        color: #6313ee;
+    }
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+        background: rgb(154, 218, 228);
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    form input, form textarea {
+        width: 100%;
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    form button {
+        width: 100%;
+    }
+    footer {
+        background: #19043c;
+        padding: 1.5rem;
+        text-align: center;
+        font-size: 0.9rem;
+        color: white;
+        border-top: 1px solid #00796b;
+    }
+
+    #services {
+        height: 100vh;
+        width: 100%;
+        background-image: url("apl bg2.jpg");
+        background-size: cover;
+        padding: 3rem 2rem;
+    }
+    #contact {
+        background-image: url("apl bg1.jpg");
+        padding: 3rem 2rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.8s ease;
+    }
+    .fade-in.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>+ Apollo Pharmacy</h1>
+    <nav>
+        <a href="D:\VRIF\TASK1.html">Account</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content fade-in">
+        <h2>Your Health, Our Priority</h2>
+        <p>Trusted medicines, health products, and expert advice — all at Apollo Pharmacy.</p>
+        <button class="btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Explore More</button>
+    </div>
+</section>
+<section id="services"  class="fade-in">
+    <h3>Our Services</h3>
+    <div class="cards">
+        <div class="card">
+            <h4>🏥 Medicines</h4>
+            <p>Wide range of prescription and over-the-counter medicines delivered to your door.</p>
+        </div>
+        <div class="card">
+            <h4>🧴 Health Products</h4>
+            <p>Personal care, vitamins, supplements, and wellness essentials at best prices.</p>
+        </div>
+        <div class="card">
+            <h4>📦 Home Delivery</h4>
+            <p>Fast and safe doorstep delivery of your health needs, anywhere in India.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact" class="fade-in">
+    <h3>Contact Us</h3>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    &copy; 2025 Apollo Pharmacy. All rights reserved.
+</footer>
+
+<script>
+    // Scroll Animation
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2 };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+        });
+    }, appearOptions);
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+
+    // Form Submission Handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !message) {
+            alert('Please fill in all fields.');
+            return;
+        }
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+            alert('Please enter a valid email.');
+            return;
+        }
+        alert('Thank you, ' + name + '! Your message has been sent.');
+        this.reset();
+    });
+</script>
+</body>
+</html>
